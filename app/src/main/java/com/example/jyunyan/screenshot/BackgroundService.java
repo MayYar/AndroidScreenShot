@@ -24,9 +24,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 import static com.example.jyunyan.screenshot.MainActivity.getMainDirectoryName;
-import static com.example.jyunyan.screenshot.MainActivity.store;
-import static com.example.jyunyan.screenshot.MainActivity.takeScreenShot;
-import static com.example.jyunyan.screenshot.MainActivity.takeScreenShot2;
+
 
 public class BackgroundService extends Service {
 

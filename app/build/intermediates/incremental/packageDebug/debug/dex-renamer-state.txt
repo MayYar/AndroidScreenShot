@@ -1,4 +1,4 @@
-#Thu Apr 19 13:33:39 CST 2018
+#Tue Feb 19 09:01:21 CST 2019
 path.1=classes.dex
 path.0=classes.dex
 renamed.5=classes6.dex
@@ -7,12 +7,12 @@ renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.5=C\:\\Users\\JyunYan\\Desktop\\MUIlab\\predict boredom\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\52
-base.4=C\:\\Users\\JyunYan\\Desktop\\MUIlab\\predict boredom\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\50
-base.3=C\:\\Users\\JyunYan\\Desktop\\MUIlab\\predict boredom\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\55
-base.2=C\:\\Users\\JyunYan\\Desktop\\MUIlab\\predict boredom\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\53
-base.1=C\:\\Users\\JyunYan\\Desktop\\MUIlab\\predict boredom\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\54
-base.0=C\:\\Users\\JyunYan\\Desktop\\MUIlab\\predict boredom\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\51
+base.5=C\:\\Users\\JYL\\Desktop\\github\\AndroidScreenShot\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\15
+base.4=C\:\\Users\\JYL\\Desktop\\github\\AndroidScreenShot\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
+base.3=C\:\\Users\\JYL\\Desktop\\github\\AndroidScreenShot\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\13
+base.2=C\:\\Users\\JYL\\Desktop\\github\\AndroidScreenShot\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
+base.1=C\:\\Users\\JYL\\Desktop\\github\\AndroidScreenShot\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\12
+base.0=C\:\\Users\\JYL\\Desktop\\github\\AndroidScreenShot\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17
 path.5=classes.dex
 path.4=classes.dex
 path.3=classes.dex

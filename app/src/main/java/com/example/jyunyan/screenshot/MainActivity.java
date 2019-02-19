@@ -1,10 +1,15 @@
 package com.example.jyunyan.screenshot;
 
+import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Rect;
+import android.os.Build;
 import android.os.Environment;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -25,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
     public String fileName = "NA";
 
     private Button shot, stop;
-
     File saveFile = getMainDirectoryName();
     private Timer mTimer = null;
     private TimerTask mTimerTask = null;
@@ -39,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
         shot = (Button)findViewById(R.id.btn_shot);
         stop = (Button)findViewById(R.id.btn_stop);
+        isStoragePermissionGranted();
 
         shot.setOnClickListener(doClick);
         stop.setOnClickListener(doClick);
@@ -95,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
 //                        File saveFile = getMainDirectoryName();//get the path to save screenshot
 
                         store(b, fileName + ".jpg", saveFile);//save the screenshot to selected path
-                        Log.e(LOG_TAG, "Save " + fileName + ".jpg");
+                        Log.e(LOG_TAG, "Save " + fileName + ".jpg into" + saveFile);
 
                     } else
                         //If bitmap is null show toast message
@@ -142,8 +147,9 @@ public class MainActivity extends AppCompatActivity {
         File mainDir = new File(
                 Environment.getExternalStoragePublicDirectory(
                         Environment.DIRECTORY_PICTURES), "Demo");
-        Log.e(LOG_TAG, "Demo File created" );
 
+        Log.e(LOG_TAG, "Demo File is presented at " + mainDir );
+//        mainDir.mkdirs();
 //        //If File is not present create directory
         if (!mainDir.mkdirs()) {
             Log.e(LOG_TAG, "Directory not created");
@@ -183,6 +189,37 @@ public class MainActivity extends AppCompatActivity {
         Bitmap b = Bitmap.createBitmap(b1, 0, statusBarHeight, width, height - statusBarHeight);
         view.destroyDrawingCache();
         return b;
+    }
+
+
+
+
+    public  boolean isStoragePermissionGranted() {
+        if (Build.VERSION.SDK_INT >= 23) {
+            if (checkSelfPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                    == PackageManager.PERMISSION_GRANTED) {
+                Log.v(LOG_TAG,"Permission is granted");
+                return true;
+            } else {
+
+                Log.v(LOG_TAG,"Permission is revoked");
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
+                return false;
+            }
+        }
+        else { //permission is automatically granted on sdk<23 upon installation
+            Log.v(LOG_TAG,"Permission is granted");
+            return true;
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(grantResults[0]== PackageManager.PERMISSION_GRANTED){
+            Log.v(LOG_TAG,"Permission: "+permissions[0]+ "was "+grantResults[0]);
+            //resume tasks needing this permission
+        }
     }
 
 }

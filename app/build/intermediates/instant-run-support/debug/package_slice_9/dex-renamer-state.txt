@@ -1,4 +1,4 @@
-#Wed Apr 18 22:45:48 CST 2018
-base.0=C\:\\Users\\JyunYan\\Desktop\\MUIlab\\predict boredom\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\48
+#Tue Feb 19 06:56:30 CST 2019
+base.0=C\:\\Users\\JYL\\Desktop\\github\\AndroidScreenShot\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\10
 path.0=classes.dex
 renamed.0=classes.dex
